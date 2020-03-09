@@ -1,0 +1,16 @@
+mkdir name.example      --  Create folder
+touch name.example      --  Create file
+
+nano file.name          --  Open nano text editor
+cat file.name           --  Prints file in terminal
+
+mv old.name new.name    --  Rename file or folder
+mv old.name ../currentdir/newdir/ -- move files or folder
+
+cp old.name new.name    -- copy file to new file if it doesn't exist
+
+rm file.name            -- delete file
+rmdir dirname           -- delete folder
+rm -r dirname           -- delete folder -r = recursive, everything in the folder
+
+trin 16
