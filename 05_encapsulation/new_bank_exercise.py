@@ -37,12 +37,14 @@ class Bank:
         # else if list is not empty and the new account is an account and not a list
         # then we can check if it's not in the __accounts_in_bank and append it
         elif isinstance(new_account, Account):
-            is_duplicate = False
-            for account in self.__accounts_in_bank:
+            is_duplicate = False # boolean to check if the account is a duplicate
 
+            for account in self.__accounts_in_bank:
+                # checks if the new account already is in the accounts_in_bank list
                 if new_account.customer is account.customer:
                     is_duplicate = True
             
+            # Then we append the new account to the list if it's not a duplicate
             if is_duplicate == False:
                 self.__accounts_in_bank.append(new_account)
                 print('Added')
