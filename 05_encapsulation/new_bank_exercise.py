@@ -21,7 +21,6 @@ class Bank:
 
     @account.setter
     def account(self, new_account):
-
         # Checks if its a list, and if it is, we iterate over the list,
         # and call the account.setter method to append each item from the list
         if isinstance(new_account, list):
@@ -51,12 +50,6 @@ class Bank:
             else:
                 print('Error adding the customer to an account. The customer already has an account')
             
-                    
-            
-
-            
-
-
 
 class Account:
 
