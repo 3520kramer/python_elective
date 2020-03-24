@@ -11,7 +11,6 @@ class Node:
         self.next = None # a pointer to the next node in the linkedlist
 
     def __repr__(self):
-        #return str(self.__dict__)
         return f'{self.data}'
 
     """def __str__(self):
@@ -180,12 +179,13 @@ llist2 = LinkedList()
 data1 = 'data1'
 data2 = 'data2'
 data3 = 'data3'
-data4 = 'data4'
-data5 = 'data5'
 
 llist.append(data1)
 llist.append(data2)
 llist.append(data3)
+
+data4 = 'data4'
+data5 = 'data5'
 
 llist2.append(data4)
 llist2.append(data5)
