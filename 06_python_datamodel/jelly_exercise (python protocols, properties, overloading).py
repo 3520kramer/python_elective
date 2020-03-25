@@ -29,13 +29,15 @@ X-tra assignemnets:
 The "gas like Jelly Beans" will over time gain a little mass. 
 Small jelly fragments are lying around and can be added with the plus operator to. 
 The fragments are not objects of the Jelly Bean Class but of another more simple class called Jelly_fragment.
-This class has a fixed mass of 1, and it should not be changed. If the Jelly Bean "Ghost" at some poit regain they old mass they are only allowed to keep "over time gained mass" corosponding to 2% of the original mass. If it succeceds it is discarded. 
+This class has a fixed mass of 1, and it should not be changed. 
+If the Jelly Bean "Ghost" at some poit regain they old mass they are only allowed to keep "over time gained mass" corosponding to 2% of the original mass. If it succeceds it is discarded. 
 
 Add the functionallity of being able to write this code in the client. 
     val = j2 in me
     Where me and j2 are jelly objects
 
-You can already write j == j2 -> and get a return value of True or False. Create an implementation that when writing j == j2 checks if the mass of the 2 objects are alike.     
+You can already write j == j2 -> and get a return value of True or False. 
+Create an implementation that when writing j == j2 checks if the mass of the 2 objects are alike.     
 """
 
 # Create a Jelly class.
@@ -59,13 +61,23 @@ class Jelly:
     def __str__(self):
         return f'Mass: {self.__mass}'
 
+    # Create an implementation that when writing j == j2 checks if the mass of the 2 objects are alike. 
+    def __eq__(self, other):
+        if self.mass == other.mass:
+            return True
+        else:
+            return False
+
     # You should be able to add 2 or more jelly beans together thus the mass of the one of them will increase. 
     def __add__(self, other):
-        self.__mass += other.__mass
+        self.__mass += other.mass
 
-        # if the mass of the other is 0 or less then the jelly is a ghost, and then it will regain it's former state
+        # Small jelly fragments are lying around and can be added with the plus operator to. 
+        if isinstance(other, Jelly_fragment):
+            print("You've hit a jelly fragment")
+        # if the mass of the other is 0 or less then that jelly is a ghost, and then the ghost will regain it's former state
         # if a jelly hits a ghost/gas jelly, then the jelly will lose mass, and the ghost/gas jelly will regain it's former state
-        if other.mass <= 0:
+        elif other.mass <= 0:
             other.mass = other.former_state
             self.mass -= other.mass
 
@@ -104,8 +116,28 @@ class Jelly:
         self.__former_state = former_state
 
 
-        
+class Jelly_fragment:
 
+    def __init__(self):
+        self.__mass = 1
+    
+    @property
+    def mass(self):
+        return self.__mass
+"""
+    @mass.setter
+    def mass(self, mass):
+        self.__mass = mass
+"""
 
 jelly = Jelly(2)
 ghostJelly = Jelly(2)
+fragJelly = Jelly_fragment()
+
+jelly1 = jelly
+jelly2 = jelly
+
+#print("something:", jelly1 == jelly2)
+#print("eq", jelly == ghostJelly)
+
+#print(isinstance(jelly, Jelly))
