@@ -48,7 +48,7 @@ class Jelly:
 
         if len(args) == 0:
             self.__mass = 3
-            self.__former_state = args[0]
+            self.__former_state = 3
         elif len(args) == 1:
             self.__mass = args[0]
             self.__former_state = args[0]
@@ -85,6 +85,7 @@ class Jelly:
         # The colliding jelly which will become a ghost should not remember its former state.
         else:
             other.mass = 0
+            other.former_state = 0
         
         # For debugging
         #return f'{self} -- {other}'
@@ -130,8 +131,9 @@ class Jelly_fragment:
         self.__mass = mass
 """
 
-jelly = Jelly(2)
+jelly = Jelly()
 ghostJelly = Jelly(2)
+
 fragJelly = Jelly_fragment()
 
 jelly1 = jelly

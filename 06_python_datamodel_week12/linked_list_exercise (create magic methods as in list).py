@@ -31,10 +31,10 @@ class LinkedList:
 
     # function that makes the object iterable 
     def __iter__(self):
-        current = self.head
-        while current is not None:
-            yield current # same as return but the rest of the function is stille executed
-            current = current.next
+        currentNode = self.head
+        while currentNode: # while current is not None
+            yield currentNode # same as return but the rest of the function is stille executed
+            currentNode = currentNode.next
 
 
     # returns the length of the linkedlist
