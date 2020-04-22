@@ -18,8 +18,14 @@ Week 10 - name
 Text
 
 ---
-Week 09 - name
+Week 09 - Utilities and Modules
 ---
+This week we worked on getting to know some of pythons different modules. We built a script which can clone all the repositories of a github user into a folder locally on the computer. We also built a web crawler which should be able to download the entire content of a webpage, and get it to work locally. 
+We worked with the modules:
+- os
+- subprocess
+- requests
+- and we created our own module and imported it
 
 
 ---
