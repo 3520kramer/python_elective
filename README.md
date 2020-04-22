@@ -15,8 +15,8 @@ This week we worked with using and creating our own decoratores. We solved exerc
 Week 12 - The Python Datamodel
 ---
 We worked with pythons built-in methods, and created our own implementation of those. We also created our own linked list as Python doesn't have one. We also built some of the functionality to a game, so to get it working, we needed to create a class and implement methods such as:
-- '__len__'
-- '__eq__'
+- __len__
+- __eq__
 - __add__
 - __str__
 - __sub__
