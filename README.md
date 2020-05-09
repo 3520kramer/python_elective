@@ -2,6 +2,11 @@
 
 At the Introduction to Python course we solve small assignments. Each week we have a new area of focus.
 ---
+Week 14 - Comprehension
+---
+This week we worked with comprehensions. We used list, set, tuple and dictionary comprehension. We also used the decorators from last week to find out if comprehension actually is faster than a normal for loop
+
+---
 
 Week 13 - Decorators
 ---
