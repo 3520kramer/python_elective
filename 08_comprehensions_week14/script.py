@@ -31,5 +31,4 @@ random_dict = {1:'Number One', 2:'Number two'} # for demo purposes
 
 dict_comp = {key:value for (key, value) in random_dict.items()}
 
-
 dict = {number:number*2 for number in range(4)}
